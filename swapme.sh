@@ -7,12 +7,16 @@
 # and that's as frustrating as you would think if
 # you don't have console access. This script was
 # written for the casual user to update their hostname.
-# assumes new host is in DNS. can't get update just IP.
+# assumes new host is in DNS. can't yet update just the IP.
+# script also stores backups of files in case user derps
 
+
+# checks to make sure user is root. comment out if /etc/* is writable by all
 if [ `echo $USER` != root ]; then
 	printf "\e[1;31mYou must be root to run this script.\e[0m\n"
 	exit
 fi
+
 ## If User has no arguments to script, then give usage info and exit
 
 if [ -z "$1" ]; then
