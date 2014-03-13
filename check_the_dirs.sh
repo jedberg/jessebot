@@ -14,6 +14,6 @@ DERP=`ls -A /nobackup/$i`
         if [ -z "$DERP" ]; then
                 echo "$i is empty, man. Nothing to see here."
         else
-                echo "MONEY MONEY MONEY!: $i"
+                echo "$i: MONEY MONEY MONEY!"
         fi
 done
