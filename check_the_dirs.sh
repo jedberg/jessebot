@@ -7,10 +7,10 @@ THETHING=`cat thedirs.txt`
 #for loop to go through all the dirs
 for i in $THETHING; do
 
-# defining silly ls command
-DERP=`ls /nobackup/$i`
+# DUDE, did you know ls -A will show you just hidden files but ignore the . and .. directories?! 
+DERP=`ls -A /nobackup/$i`
 
-# if silly ls command comes up EMPTY HANDED! >:(
+# if ls command comes up EMPTY HANDED! >:(
         if [ -z "$DERP" ]; then
                 echo "$i is empty, man. Nothing to see here."
         else
